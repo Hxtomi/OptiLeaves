@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MPL-2.0
+// Copyright (c) 2025-2026 Norevy (Hxtomi).
+
 package net.norevy.optileaves;
 
 import com.google.common.collect.ImmutableList;

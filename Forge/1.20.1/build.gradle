@@ -4,7 +4,7 @@ plugins {
     id 'java-library'
 }
 group = 'net.norevy.optileaves'
-version = '2.0'
+version = '2.0.1'
 base { archivesName = 'OptiLeaves-forge-1.20.1' }
 java { toolchain.languageVersion = JavaLanguageVersion.of(17) }
 minecraft {

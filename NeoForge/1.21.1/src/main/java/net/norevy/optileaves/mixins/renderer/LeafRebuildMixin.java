@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MPL-2.0
+// Copyright (c) 2025-2026 Norevy (Hxtomi).
+
 package net.norevy.optileaves.mixins.renderer;
 
 import net.minecraft.client.renderer.LevelRenderer;
@@ -31,7 +34,10 @@ public abstract class LeafRebuildMixin {
     @Unique
     private void optileaves$markDistantFaces(BlockPos pos, BlockState oldState, BlockState newState) {
         if (!Configuration.INSTANCE.enabled || Configuration.INSTANCE.depth <= 1) return;
-        if ((oldState.getBlock() instanceof LeavesBlock) == (newState.getBlock() instanceof LeavesBlock)) return;
+        // Block-entity render updates may omit either state.
+        boolean oldLeaves = oldState != null && oldState.getBlock() instanceof LeavesBlock;
+        boolean newLeaves = newState != null && newState.getBlock() instanceof LeavesBlock;
+        if (oldLeaves == newLeaves) return;
         if (!Compat.isFancyLeaves()) return;
         int depth = Configuration.clampDepth(Configuration.INSTANCE.depth);
         for (Direction face : OPTILEAVES_DIRECTIONS) {
