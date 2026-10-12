@@ -21,6 +21,12 @@ Current source version: **v2.0.1**. Public source code starts with **v2.0**; sou
 
 See [BUILDING.md](BUILDING.md) for build instructions.
 
+## Other projects
+
+[Weather Refined](https://github.com/Hxtomi/WeatherRefind-source) is another Minecraft mod maintained by Norevy (Hxtomi). It replaces vanilla rain and snow with configurable particle effects. Downloads: [CurseForge](https://www.curseforge.com/minecraft/mc-mods/weather-refined) · [Modrinth](https://modrinth.com/mod/weatherrefind).
+
+## License
+
 Licensed under [MPL-2.0](LICENSE). Modpack inclusion is welcome. Distributed modifications to MPL-covered source files must remain available under MPL-2.0.
 
 Copyright (c) 2025-2026 Norevy (Hxtomi).
