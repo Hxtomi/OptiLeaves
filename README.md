@@ -9,6 +9,18 @@
 
 OptiLeaves is a rendering optimization mod for MC. It reduces leaf geometry in dense foliage, with adjustable culling depth to balance performance and visual detail.
 
+## Benchmarks
+
+In a dense forest test, OptiLeaves 2.0.1 delivered **35% higher average FPS** than Forge alone. Results were close to Cull Less Leaves Reforged and Cull Leaves, with pixel-identical screenshots across all three leaf optimizers in the tested scenes.
+
+![OptiLeaves performance comparison with Forge, Cull Less Leaves Reforged and Cull Leaves](docs/assets/optileaves-benchmark.png)
+
+Tested on 14 October 2026 with MC 1.20.1 / Forge 47.4.10, a Ryzen 7 5800H and RTX 3050 Laptop, at 1080p with Fancy leaves and view distance 8. Each optimizer ran separately, without shaders or extra renderer optimizers. FPS and frame-time figures are medians of three independent runs.
+
+This was a constructed forest stress test. Results will vary with hardware and modpacks, and small differences between optimizers may be measurement noise. The compilation and allocation rows are separate single-run controls; they measure summed task time and temporary Java allocations, rather than chunk-loading time or total memory use. See [the test setup and full results](docs/BENCHMARKS.md) for details.
+
+## Source code
+
 Current source version: **v2.0.1**. Public source code starts with **v2.0**; source code and release files from earlier versions are not included here. Download counts cover the whole project, including earlier releases. The Modrinth counter combines both project listings. Download counters update daily.
 
 | MC version | Source code |
@@ -30,3 +42,4 @@ See [BUILDING.md](BUILDING.md) for build instructions.
 Licensed under [MPL-2.0](LICENSE). Modpack inclusion is welcome. Distributed modifications to MPL-covered source files must remain available under MPL-2.0.
 
 Copyright (c) 2025-2026 Norevy (Hxtomi).
+
